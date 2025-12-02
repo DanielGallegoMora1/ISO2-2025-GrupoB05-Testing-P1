@@ -1,10 +1,12 @@
+package src;
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class App {
     public static Scanner sc = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        System.out.println("Introduzca una fecha válida:");
         try {
             Fecha fecha = leerFecha();
             if (fecha.comprobarBisiesto())
@@ -39,9 +41,7 @@ public class App {
     }
 
     public static Fecha leerFecha() throws Exception {
-        int dia = leerEntero("día");
-        int mes = leerEntero("mes");
         int anio = leerEntero("año");
-        return new Fecha(dia, mes, anio);
+        return new Fecha(anio);
     }
 }
