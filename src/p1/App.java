@@ -1,4 +1,4 @@
-package src;
+package p1;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -41,7 +41,9 @@ public class App {
     }
 
     public static Fecha leerFecha() throws Exception {
+        int dia = leerEntero("día");
+        int mes = leerEntero("mes");
         int anio = leerEntero("año");
-        return new Fecha(anio);
+        return new Fecha(dia, mes, anio);
     }
 }
